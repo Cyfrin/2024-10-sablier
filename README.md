@@ -167,10 +167,7 @@ $ forge test
 - The `depletionTimeOf` function depends on the stream's rate per second. Therefore, any change in the rate per second
   will result in a new depletion time. Therefore, `depletionTimeOf` should not be trusted by on chain integrators.
 - Reorg attack can can change stream's parameters except sender and recipient.
-- As explained in the [Technical Doc](https://github.com/sablier-labs/flow/blob/main/TECHNICAL-DOC.md),
-  recipients cannot withdraw the exact amount of debt streamed due to precision errors. This discrepancy is minor, with
-  the maximum potential loss (in USDC) being just $0.01 per withdraw. Typically, this loss ranges from 0 to 1 unit of
-  the token (in its native decimal format), depending on the timing of the recipient's withdrawal.
+- As explained in the Technical Doc, there could be a minor discrepancy between the actual streamed amount and the expected amount. This is due to rps being an 18-decimal number, while users provide the amount per interval in the UI. If rps had infinite decimals, this discrepancy would not occur
 
 ### Previous audit report
 
