@@ -173,4 +173,6 @@ $ forge test
 
 https://cantina.xyz/portfolio/0e86d73a-3c3b-4b2b-9be5-9cecd4c7a5ac
 
+**Additional Known issues detected by LightChaser can be found [here](https://github.com/Cyfrin/2024-10-sablier/issues/1).
+
 [//]: # (known-issues-close)
